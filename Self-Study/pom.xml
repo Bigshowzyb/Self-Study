@@ -10,6 +10,10 @@
         <relativePath/>
     </parent>
 
+    <modules>
+        <module>api-service</module>
+    </modules>
+
     <groupId>com.example</groupId>
     <artifactId>selfstudy</artifactId>
     <version>1.0.0</version>
