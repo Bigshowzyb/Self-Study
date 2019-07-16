@@ -2,9 +2,7 @@ package com.example.apiservice.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author Bigshowzyb
@@ -23,5 +21,9 @@ public class User extends BaseEntity{
 
     @Column(name = "user_address")
     private String address;
+
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    private Studnet studnet;
 
 }
